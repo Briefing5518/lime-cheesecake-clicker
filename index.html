@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lime Cheesecake Clicker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Image and Click Button -->
+        <div class="image-container">
+            <img src="lime-cheesecake.jpg" alt="Lime Cheesecake" class="cheesecake-img">
+            <button class="click-button" onclick="handleClick()">Click as much as you can!</button>
+            <!-- CPS Display -->
+            <div id="cps-display">CPS: 0</div>
+        </div>
+        
+        <!-- Leaderboard -->
+        <div class="leaderboard">
+            <h2>Total Clicks: <span id="total-clicks">0</span></h2>
+            <h3>Leaderboard</h3>
+            <ul id="leaderboard-list"></ul>
+        </div>
+
+        <!-- Name and Click Form -->
+        <div class="user-input">
+            <input type="text" id="username" placeholder="Enter your name (or leave blank for anon)">
+            <button onclick="submitScore()">Submit Score</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
