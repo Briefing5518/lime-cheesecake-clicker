@@ -3,33 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lime Cheesecake Clicker</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Lime Cheese .com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-top: 50px;
+            color: #4CAF50;
+        }
+
+        #cheesecake {
+            margin-top: 50px;
+            cursor: pointer;
+            width: 300px; /* Adjust size */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        audio {
+            display: none; /* Hide the audio player */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Image and Click Button -->
-        <div class="image-container">
-            <img src="lime-cheesecake.jpg" alt="Lime Cheesecake" class="cheesecake-img">
-            <button class="click-button" onclick="handleClick()">Click as much as you can!</button>
-            <!-- CPS Display -->
-            <div id="cps-display">CPS: 0</div>
-        </div>
-        
-        <!-- Leaderboard -->
-        <div class="leaderboard">
-            <h2>Total Clicks: <span id="total-clicks">0</span></h2>
-            <h3>Leaderboard</h3>
-            <ul id="leaderboard-list"></ul>
-        </div>
 
-        <!-- Name and Click Form -->
-        <div class="user-input">
-            <input type="text" id="username" placeholder="Enter your name (or leave blank for anon)">
-            <button onclick="submitScore()">Submit Score</button>
-        </div>
+    <div class="container">
+        <h1>Hey, you're here! Well, this is my website.</h1>
+        <p>I bought the domain for unlimited emails to limecheese.com, but since you're here, enjoy this music!</p>
+
+        <!-- Lime Cheesecake image -->
+        <img id="cheesecake" src="limecheesecake.jpg" alt="Lime Cheesecake">
+
+        <!-- Hidden audio element -->
+        <audio id="music" src="music.mp3" preload="auto"></audio>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Get the image and audio elements
+        const cheesecake = document.getElementById('cheesecake');
+        const music = document.getElementById('music');
+
+        // Add click event listener to the image
+        cheesecake.addEventListener('click', function() {
+            // Play the music when the cheesecake is clicked
+            music.play();
+        });
+    </script>
+
 </body>
 </html>
